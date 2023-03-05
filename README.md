@@ -1,2 +1,2 @@
 # nvim
-My personal nvim config based on git@github.com:ThePrimeagen/init.lua.git
+My personal nvim config based on https://github.com/ThePrimeagen/init.lua
