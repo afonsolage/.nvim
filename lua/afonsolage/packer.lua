@@ -50,7 +50,14 @@ return require('packer').startup(function(use)
     }
 
     -- Inline error hints
-    use("folke/trouble.nvim")
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+            }
+        end
+    }
 
     use("folke/zen-mode.nvim")
 
