@@ -1,8 +1,0 @@
-plugins = {
-	{ "catppuccin/nvim", name = "catppuccin-macchiato", priority = 1000 },
-}
-
-opts = {
-}
-
-require("lazy").setup(plugins, opts)
