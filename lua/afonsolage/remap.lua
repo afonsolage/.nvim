@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move line up and down keeping identation
@@ -16,10 +15,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Delete above or bello
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Some commands only works <Esc>
@@ -27,3 +26,4 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Funny
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+
