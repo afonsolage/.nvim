@@ -21,18 +21,6 @@ end
 
 return {
 	{
-		"hrsh7th/nvim-cmp",
-		opts = function(_, opts)
-			local cmp = require("cmp")
-			if opts.sources == nil then
-				opts.sources = {}
-			end
-			opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
-				{ name = "crates" },
-			}))
-		end,
-	},
-	{
 		"Saecki/crates.nvim",
 		event = { "BufRead Cargo.toml" },
 		dependencies = {
@@ -51,16 +39,6 @@ return {
 				vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
 			end
 		end,
-	},
-	{
-		"nevom/nvim-lspconfig",
-		opts = {
-			setup = {
-				rust_analyzer = function()
-					return true
-				end,
-			},
-		},
 	},
 	{
 		"mrcjkb/rustaceanvim",

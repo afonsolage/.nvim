@@ -146,6 +146,9 @@ return {
 				},
 				handlers = {
 					lsp_zero.default_setup,
+					rust_analyzer = function()
+						return true
+					end,
 					lua_ls = function()
 						-- (Optional) Configure lua language server for neovim
 						local lua_opts = lsp_zero.nvim_lua_ls()
