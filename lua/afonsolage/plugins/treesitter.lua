@@ -19,8 +19,6 @@ return {
 			indent = { enable = true },
 			ensure_installed = {
 				"rust",
-				"bash",
-				"c",
 				"diff",
 				"html",
 				"javascript",
@@ -36,8 +34,6 @@ return {
 				"query",
 				"regex",
 				"toml",
-				"tsx",
-				"typescript",
 				"vim",
 				"vimdoc",
 				"yaml",
