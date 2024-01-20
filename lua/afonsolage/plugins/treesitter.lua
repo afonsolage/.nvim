@@ -20,6 +20,7 @@ return {
 			ensure_installed = {
 				"rust",
 				"diff",
+				"c_sharp",
 				"html",
 				"javascript",
 				"jsdoc",
