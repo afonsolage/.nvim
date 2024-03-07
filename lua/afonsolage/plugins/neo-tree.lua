@@ -61,7 +61,6 @@ return {
 				mappings = {
 					["<space>"] = "none",
 					["<space>e"] = { "toggle_node", nowait = true },
-					["Z"] = { "expand_all_nodes" },
 				},
 			},
 			default_component_configs = {
