@@ -31,7 +31,7 @@ return {
 				desc = "Buffer explorer",
 			},
 			{
-				"<leader>de",
+				"<leader>se",
 				function()
 					require("neo-tree.command").execute({ source = "document_symbols", toggle = true })
 				end,
@@ -60,6 +60,8 @@ return {
 			window = {
 				mappings = {
 					["<space>"] = "none",
+					["<space>e"] = { "toggle_node", nowait = true },
+					["Z"] = { "expand_all_nodes" },
 				},
 			},
 			default_component_configs = {
@@ -69,6 +71,9 @@ return {
 					expander_expanded = "",
 					expander_highlight = "NeoTreeExpander",
 				},
+			},
+			document_symbols = {
+				follow_cursor = true,
 			},
 		},
 		--config = function(_, opts)
