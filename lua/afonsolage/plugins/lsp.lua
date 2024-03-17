@@ -97,17 +97,6 @@ return {
 			lsp_zero.on_attach(function(client, bufnr)
 				local opts = { buffer = bufnr, remap = false }
 
-				-- Rust has its own bindings
-				if client.name ~= "rust_analyzer" then
-					vim.keymap.set("n", "K", function()
-						vim.lsp.buf.hover()
-					end, opts)
-
-					vim.keymap.set("n", "<leader>vca", function()
-						vim.lsp.buf.code_action()
-					end, opts)
-				end
-
 				vim.keymap.set("n", "gd", function()
 					vim.lsp.buf.definition()
 				end, opts)
@@ -138,11 +127,6 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"rust_analyzer",
-					"tsserver",
-					"eslint",
-					"cssls",
-					"html",
-					"jsonls",
 				},
 				handlers = {
 					lsp_zero.default_setup,

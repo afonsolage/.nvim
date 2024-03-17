@@ -51,6 +51,22 @@ return {
 		config = function()
 			vim.g.rustaceanvim = {
 				server = {
+                    on_attach = function(client, bufnr)
+				        local opts = { buffer = bufnr, remap = false }
+
+                        vim.keymap.set("n", "K", function()
+                            vim.lsp.buf.hover()
+                        end, opts)
+
+                        vim.keymap.set("n", "<leader>vca", function()
+                            vim.lsp.buf.code_action()
+                        end, opts)
+
+                        vim.keymap.set("n", "<leader>h", function()
+                            local enabled = vim.lsp.inlay_hint.is_enabled(bufnr)
+                            vim.lsp.inlay_hint.enable(bufnr, not enabled)
+                        end, opts)
+                    end,
 					settings = {
 						["rust-analyzer"] = {
 							cargo = {
@@ -71,6 +87,10 @@ return {
 									["async-recursion"] = { "async_recursion" },
 								},
 							},
+                            inlayHints = {
+                                enable = true,
+                                showParameterNames = true,
+                            },
 						},
 					},
 				},
